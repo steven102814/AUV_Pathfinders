@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             #"test_node = my_robot_controller.my_first_node:main"
             "test_dvl = my_robot_controller.my_dvl_test:main"
+            "test_bar_sensor = my_robot_controller.my_bar_sensor_node:main"
         ],
     },
 )
