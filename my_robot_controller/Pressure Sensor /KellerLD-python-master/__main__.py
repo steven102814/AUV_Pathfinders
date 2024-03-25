@@ -1,7 +1,11 @@
 from kellerLD import KellerLD
 import time
 
-sensor = KellerLD()
+# sensor = KellerLD()
+# sensor.init()
+# sensor.read()
+# sensor.pressure()
+# sensor.temperature()
 
 if not sensor.init():
 	print("Failed to initialize Keller LD sensor!")
