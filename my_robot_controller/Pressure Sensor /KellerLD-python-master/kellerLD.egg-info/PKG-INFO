@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: kellerLD
+Version: 1.0
+Summary: A python driver for the Keller LD line of pressure sensors.
+Home-page: https://github.com/bluerobotics/KellerLD-python
+License: TODO
+Platform: UNKNOWN
+License-File: LICENSE
+
+UNKNOWN
+
