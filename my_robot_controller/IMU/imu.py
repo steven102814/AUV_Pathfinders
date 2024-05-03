@@ -14,6 +14,8 @@ consecutive_threshold = 1 # number of times it needs to exceed at least
 count_exceed = 0 
 #state = 0 
 
+arduino = serial.Serial(port='COM4', baudrate = 115200, timeout = 1)
+
 while True:
     #check sensor data
     acceleration = sensor.acceleration
@@ -37,6 +39,9 @@ while True:
     while count_exceed >= consecutive_threshold:
         exceed_threshold = 1 
         count_exceed = 0 # reset counter 
+
+    ser.write(str(exceed_threshold).encode()) #serially send the string of the state
+
     print("Acceleration: X:%.2f, Y: %.2f, Z: %.2f m/s^2" % (sensor.acceleration))
     print("Gyro X:%.2f, Y: %.2f, Z: %.2f radians/s" % (sensor.gyro))
     print("Exceed threshold: %d" %exceed_threshold) #print if acceleration exceeds threshold. 
